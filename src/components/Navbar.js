@@ -18,27 +18,27 @@ const styles = {
     height: 100,
     display: "flex",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
   },
   links: {
     margin: 50,
     textDecoration: "none",
     color: "white",
-    cursor: "pointer"
+    cursor: "pointer",
   },
   tonya: {
     margin: 50,
     textDecoration: "none",
-    color: "white"
+    color: "white",
   },
   menuLinks: {
     margin: 50,
     textDecoration: "none",
-    color: "black"
+    color: "black",
   },
   image: {
-    height: 60
-  }
+    height: 60,
+  },
 };
 
 class Navbar extends Component {
@@ -46,7 +46,7 @@ class Navbar extends Component {
     super(props);
     this.state = {
       scrollToBottom: props.scrollToBottom,
-      menuIsOpen: false
+      menuIsOpen: false,
     };
   }
 
@@ -56,7 +56,7 @@ class Navbar extends Component {
 
   changeMenuState() {
     this.setState({
-      menuIsOpen: !this.state.menuIsOpen
+      menuIsOpen: !this.state.menuIsOpen,
     });
   }
 
@@ -66,16 +66,16 @@ class Navbar extends Component {
     const dropdownItemsLarge = [
       {
         path: "/donate",
-        text: "Donate"
+        text: "Donate",
       },
       {
         path: "/signup",
-        text: "Volunteer"
+        text: "Volunteer",
       },
       {
         path: "/sponsor",
-        text: "Sponsor"
-      }
+        text: "Sponsor",
+      },
     ];
     if (isEmpty(auth) || auth.msg !== signInSuccess) {
       return (
@@ -126,7 +126,7 @@ class Navbar extends Component {
                 Volunteer
               </Link>
               <Link className="menu-item" to="/sponsor">
-                Sponsor
+                Sponsor Us
               </Link>
               <Link className="menu-item" to="/testimonials">
                 Testimonials
@@ -151,12 +151,12 @@ class Navbar extends Component {
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    auth: state.auth
+    auth: state.auth,
   };
 };
 
 export default connect(mapStateToProps, {
-  LogoutAction
+  LogoutAction,
 })(Navbar);
