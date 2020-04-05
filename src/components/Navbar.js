@@ -126,7 +126,7 @@ class Navbar extends Component {
                 Volunteer
               </Link>
               <Link className="menu-item" to="/sponsor">
-                Sponsor Us
+                Sponsor
               </Link>
               <Link className="menu-item" to="/testimonials">
                 Testimonials
